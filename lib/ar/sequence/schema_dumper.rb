@@ -3,9 +3,9 @@
 module AR
   module Sequence
     module SchemaDumper
-      def header(stream)
-        super
+      def extensions(stream)
         sequences(stream)
+        super
       end
 
       def retrieve_search_path

@@ -21,5 +21,5 @@ ActiveRecord::Migration::CommandRecorder.include(AR::Sequence::CommandRecorder)
 ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.include(
   AR::Sequence::Adapter
 )
-ActiveRecord::SchemaDumper.prepend(AR::Sequence::SchemaDumper)
+ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaDumper.prepend(AR::Sequence::SchemaDumper)
 ActiveRecord::Base.extend(AR::Sequence::ModelMethods)
